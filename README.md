@@ -83,4 +83,5 @@ in terminal run
 	docker-compose up
 
 You should have a basic hello world app on localhost:3000
+
 	
