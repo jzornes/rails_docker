@@ -84,4 +84,15 @@ in terminal run
 
 You should have a basic hello world app on localhost:3000
 
-	
+-- Create a basic scaffold
+
+docker-compose run --rm app rails g scaffold blog title body:text
+
+-- Add a some comments
+
+docker-compose run --rm app rails g model Comment commenter:string body:text blog:references
+
+docker-compose stop
+docker-compose run -rm app rake db:create
+
+
