@@ -93,6 +93,14 @@ docker-compose run --rm app rails g scaffold blog title body:text
 docker-compose run --rm app rails g model Comment commenter:string body:text blog:references
 
 docker-compose stop
-docker-compose run -rm app rake db:create
+docker-compose run -rm app rake db:Create
+
+docker-compose start
+
+Since we are using Materialize Sass and it uses jQuery we have to add it. use yarn to add it
+docker-compose run -rm app yarn add jquery
+
+docker-compose run -rm app rails generate simple_form:materialize:install
+
 
 
